@@ -1,20 +1,20 @@
-# 🌾 Agricultural Biotech Supply Chain Risk Model Dashboard
+# 🌾 Agricultural Biotech Supply Chain Risk Model
 
-An interactive quantitative risk assessment tool built with **Streamlit** to evaluate biological pathogen risks across contracted farming portfolios. The application calculates expected financial loss (EL), evaluates the cost-benefit viability of prophylactic bio-shield treatments, and stress-tests portfolios against climate-driven infection spikes.
-
----
-
-## 📌 Features
-
-- **Dynamic Financial Exposure Modeling:** Calculates baseline expected loss ($EL = \text{Asset Value} \times P(\text{Infection}) \times \text{Loss Given Infection}$).
-- **Mitigation Cost-Benefit Analysis:** Computes net portfolio position including treatment costs and renders actionable operational verdicts.
-- **Climate Anomaly Stress Testing:** Simulates tail-risk scenarios to measure extreme vulnerability.
-- **Real-Time Visualizations:** Interactive Matplotlib bar charts comparing Baseline, Mitigated, and Stressed risk scenarios with automated currency labels in INR (₹).
+An interactive risk analytics dashboard built with Streamlit and Monte Carlo simulation. This tool models multi-factor biological infection risk across distributed farm portfolios, accounting for regional contagion correlation, proactive bio-shield mitigations, indemnity insurance, and climate stress shocks.
 
 ---
 
-## 🚀 Quickstart Guide
+## 📌 Overview & Methodology
 
-### Prerequisites
+The dashboard employs a **Gaussian single-factor copula model** structured by growing regions:
+- **Spatial Contagion:** Farms within the same region share a systemic regional shock ($Z_{\text{region}}$), while having independent idiosyncratic shocks ($\epsilon_i$).
+- **Regional Diversification:** Independent geographic regions provide non-correlated disease/weather diversification benefits.
+- **Financial Risk Metrics:** Computes Expected Loss (EL), Value at Risk (VaR), Conditional Value at Risk (CVaR / Expected Shortfall), and Unexpected Loss (UL).
+- **Mitigation Decision Engine:** Evaluates P&L viability and solvency protection by contrasting bio-shield capital expenditure and insurance premiums against net loss reductions.
 
-Ensure you have **Python 3.9+** installed on your system.
+---
+
+## 🚀 Quickstart
+
+### 1. Prerequisites
+Ensure you have Python 3.9+ installed.
